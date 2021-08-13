@@ -1,0 +1,33 @@
+@import '../variable.scss';
+
+.container {
+  cursor: pointer;
+
+  .reviews {
+    font-size: 0.9rem;
+
+    span {
+      color: rgb(104, 104, 104);
+    }
+  }
+
+  .range {
+    color: $primary;
+    border: 1px $primary solid;
+  }
+
+  .badge {
+    background: $primary-opacity-2;
+
+    &.symptoms {
+      background: #fff;
+      color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
+}

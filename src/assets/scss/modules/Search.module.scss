@@ -1,0 +1,23 @@
+@import '../variable.scss';
+
+.container {
+  // background: $primary-opacity-1 !important;
+  // border: none;
+
+  .button {
+    width: 100%;
+    background: $primary;
+    border: 1px solid $primary;
+  }
+
+  .selected {
+    background: $primary-opacity-1;
+    border: none;
+    color: $primary;
+    font-weight: bold;
+
+    &:hover i {
+      color: red;
+    }
+  }
+}
