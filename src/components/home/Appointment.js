@@ -1,7 +1,7 @@
 import { Button, Col, Row } from 'reactstrap'
 import styles from '../../assets/scss/modules/Appointment.module.scss'
 
-export const Appointment = () => {
+export const Appointment = (props) => {
 
   const renderTime = (date, day) => {
     return (
@@ -59,16 +59,16 @@ export const Appointment = () => {
   }
 
   return (
-    <aside className={`${styles.container} d-flex flex-column border rounded-3`}>
+    <aside className={`${props.selectedClinic.id && styles.container} d-flex flex-column border rounded-3`}>
       <div className="p-3">
         <h6>Appointment Slot</h6>
-        <h3>Klinik Idzham</h3>
-        <div className="mt-3 d-flex align-items-center">
+        <h3>{props.selectedClinic.name}</h3>
+        {props.selectedClinic.id && <div className="mt-3 d-flex align-items-center">
           <span className="text-primary fw-bold">09 - 15 Aug 2021</span>
           <Button size="sm" className="ms-auto" color="primary">Change Week</Button>
-        </div>
+        </div>}
       </div>
-      <div className={`${styles.timeContainer}`}>
+      {props.selectedClinic.id && <div className={`${styles.timeContainer}`}>
         {renderTime('09 Aug 2021', 'Monday')}
         {renderTime('10 Aug 2021', 'Tuesday')}
         {renderTime('11 Aug 2021', 'Wednesday')}
@@ -76,10 +76,13 @@ export const Appointment = () => {
         {renderTime('13 Aug 2021', 'Friday')}
         {renderTime('14 Aug 2021', 'Saturday')}
         {renderTime('15 Aug 2021', 'Sunday')}
-      </div>
-      <div className="p-3 mt-auto">
+      </div>}
+      {!props.selectedClinic.id && <div className="text-center m-4">
+        <h4>Please Choose One Clinic</h4>
+      </div>}
+      {props.selectedClinic.id && <div className="p-3 mt-auto">
         <Button color="primary" className="w-100">Next</Button>
-      </div>
+      </div>}
     </aside>
   )
 }

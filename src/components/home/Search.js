@@ -21,7 +21,7 @@ export const Search = (props) => {
   const renderSelectedSymptoms = () => {
     return props.selectedSymptoms.map((symptom) => {
       return (
-        <button key={symptom.id} size="sm" className={`${styles.selected} me-2 py-1 px-2 rounded-3`} onClick={() => handleRemoveSelectedSymptoms(symptom.id)}>
+        <button key={symptom.id} size="sm" className={`${styles.selected} me-2 mb-2 py-1 px-2 rounded-3`} onClick={() => handleRemoveSelectedSymptoms(symptom.id)}>
           <span>{symptom.name}</span>
           <i className="ms-1 bi bi-x-lg"></i>
         </button>

@@ -12,6 +12,7 @@ export const Clinics = () => {
   const [clinics, setClinics] = useState([])
   const [symptoms, setSymptoms] = useState([])
   const [selectedSymptoms, setSelectedSymptoms] = useState([])
+  const [selectedClinic, setSelectedClinic] = useState({})
 
   useEffect(async () => {
     getAll()
@@ -48,6 +49,10 @@ export const Clinics = () => {
     setSelectedSymptoms(copySelectedSymptoms)
   }
 
+  const selectClinic = (clinic) => {
+    setSelectedClinic(clinic)
+  }
+
   const removeSelectedSymptom = (id) => {
     const findExisting = selectedSymptoms.find((s) => s.id === id)
     const copySelectedSymptoms = [...selectedSymptoms]
@@ -60,7 +65,8 @@ export const Clinics = () => {
 
   const renderClinicCard = () => {
     return clinics.map((clinic) => {
-      return <ClinicCard key={clinic.id} clinic={clinic} symptoms={symptoms} />
+      const active = clinic.id === selectedClinic.id ? true : false
+      return <ClinicCard key={clinic.id} active={active} clinic={clinic} symptoms={symptoms} selectClinic={selectClinic} />
     })
   }
 
@@ -87,7 +93,7 @@ export const Clinics = () => {
           {renderContent()}
         </Col>
         <Col lg={3}>
-          <Appointment />
+          <Appointment selectedClinic={selectedClinic} />
         </Col>
       </Row>
     </MainLayout>

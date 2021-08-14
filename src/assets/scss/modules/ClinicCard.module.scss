@@ -20,13 +20,10 @@
   }
 
   .badge {
-    background: $primary-opacity-2;
 
-    &.symptoms {
-      background: #fff;
-      color: $primary;
-      border: 1px solid $primary;
-    }
+    background: #fff;
+    color: $primary;
+    border: 1px solid $primary;
   }
 
   &:hover {

@@ -3,7 +3,10 @@ import styles from '../../assets/scss/modules/ClinicCard.module.scss'
 
 export const ClinicCard = (props) => {
 
-  const activeStyle = props.active && styles.active
+
+  const handleSelectClinic = () => {
+    props.selectClinic(props.clinic)
+  }
 
   const renderSymptomsHandled = () => {
     return props.clinic.symptomsHandled.map((symptom) => {
@@ -14,9 +17,10 @@ export const ClinicCard = (props) => {
     })
   }
 
+  const activeStyle = props.active && styles.active
   return (
     <Col lg={6}>
-      <Card body className={`${styles.container} ${activeStyle} mb-3 rounded-3`}>
+      <Card body className={`${styles.container} ${activeStyle} mb-3 rounded-3`} onClick={handleSelectClinic}>
         <Row>
           <Col lg={3}>
             <img src={props.clinic.image} width="100%" height="80px" className="rounded-3" />
@@ -33,7 +37,7 @@ export const ClinicCard = (props) => {
           </Col>
           <Col lg={4}>
             <div className="mt-1 text-end">
-              <span className={`${styles.range} rounded-3 px-2 py-1 text-secondary"`}>
+              <span className={`${styles.range} rounded-3 px-2 py-1 text-primary`}>
                 <i className="bi bi-geo-alt me-1"></i>
                 <span>5 km away</span>
               </span>
