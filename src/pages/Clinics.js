@@ -14,7 +14,7 @@ export const Clinics = () => {
   const [selectedSymptoms, setSelectedSymptoms] = useState([])
   const [selectedClinic, setSelectedClinic] = useState({})
 
-  useEffect(async () => {
+  useEffect(() => {
     getAll()
   }, [])
 

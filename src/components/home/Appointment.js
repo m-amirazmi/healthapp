@@ -1,7 +1,27 @@
+import { useEffect, useState } from 'react'
 import { Button, Col, Row } from 'reactstrap'
 import styles from '../../assets/scss/modules/Appointment.module.scss'
+import { getDateRangeOfWeek } from '../../utils/getWeek'
 
 export const Appointment = (props) => {
+
+  const [showWeekInput, setShowWeekInput] = useState()
+  const [currentWeek, setCurrentWeek] = useState(0)
+  const [currentYear, setCurrentYear] = useState(0)
+
+  useEffect(() => {
+    const todayWeek = new Date().getWeek()
+    const year = new Date().getFullYear()
+    setCurrentWeek(todayWeek)
+    setCurrentYear(year)
+  }, [])
+
+  const handleWeek = ({ target }) => {
+    console.log(target.value)
+    const week = target.value.split('W')[1]
+    const dateRange = getDateRangeOfWeek(week)
+    console.log(dateRange)
+  }
 
   const renderTime = (date, day) => {
     return (
@@ -67,6 +87,11 @@ export const Appointment = (props) => {
           <span className="text-primary fw-bold">09 - 15 Aug 2021</span>
           <Button size="sm" className="ms-auto" color="primary">Change Week</Button>
         </div>}
+
+        <div>
+          <input type="week" onChange={handleWeek} min={`${currentYear}-W${currentWeek}`} max={`${currentYear}-W${currentWeek + 3}`} />
+        </div>
+
       </div>
       {props.selectedClinic.id && <div className={`${styles.timeContainer}`}>
         {renderTime('09 Aug 2021', 'Monday')}
