@@ -2,7 +2,33 @@ import React from 'react'
 import { Card, Col, Input, Row, Button } from 'reactstrap'
 import styles from '../../assets/scss/modules/Search.module.scss'
 
-export const Search = () => {
+export const Search = (props) => {
+
+  const handleSelect = ({ target }) => {
+    props.selectSymptom(target.value)
+  }
+
+  const handleRemoveSelectedSymptoms = (id) => {
+    props.removeSelectedSymptom(id)
+  }
+
+  const renderSymptomsList = () => {
+    return props.symptoms.map((symptom) => {
+      return <option key={symptom.id} value={symptom.id}>{symptom.name}</option>
+    })
+  }
+
+  const renderSelectedSymptoms = () => {
+    return props.selectedSymptoms.map((symptom) => {
+      return (
+        <button key={symptom.id} size="sm" className={`${styles.selected} me-2 py-1 px-2 rounded-3`} onClick={() => handleRemoveSelectedSymptoms(symptom.id)}>
+          <span>{symptom.name}</span>
+          <i className="ms-1 bi bi-x-lg"></i>
+        </button>
+      )
+    })
+  }
+
   return (
     <Card body className={`${styles.container} mb-3 rounded-3`}>
       <Row className="mb-3">
@@ -19,36 +45,19 @@ export const Search = () => {
           </select>
         </Col>
         <Col lg={3}>
-          <select className="form-select" aria-label="Default select example">
-            <option value="" disabled>Symptoms</option>
-            <option value="ampang">Demam</option>
-            <option value="gombak">Sakit Pale</option>
-            <option value="petaling jaya">Sakit Perot</option>
-            <option value="puchong">Pening2</option>
+          <select className="form-select" aria-label="Default select example" onChange={handleSelect} defaultValue="">
+            <option value="" disabled>Select symptoms</option>
+            {renderSymptomsList()}
           </select>
         </Col>
         <Col lg={2}>
-          <Button color="secondary" className={styles.button}>Find Clinics</Button>
+          <Button color="primary" className={styles.button}>Find Clinics</Button>
         </Col>
       </Row>
+      {props.selectedSymptoms.length > 0 && <p className="mb-1" style={{ fontSize: '0.8rem' }}>Selected Symptoms:</p>}
       <div>
-        <Button size="sm" className={`${styles.selected} me-2 rounded-3`}>
-          <span>Demam</span>
-          <i className="ms-1 bi bi-x-lg"></i>
-        </Button>
-        <Button size="sm" className={`${styles.selected} me-2 rounded-3`}>
-          <span>Demam</span>
-          <i className="ms-1 bi bi-x-lg"></i>
-        </Button>
-        <Button size="sm" className={`${styles.selected} me-2 rounded-3`}>
-          <span>Demam</span>
-          <i className="ms-1 bi bi-x-lg"></i>
-        </Button>
-        <Button size="sm" className={`${styles.selected} me-2 rounded-3`}>
-          <span>Demam</span>
-          <i className="ms-1 bi bi-x-lg"></i>
-        </Button>
+        {renderSelectedSymptoms()}
       </div>
-    </Card>
+    </Card >
   )
 }

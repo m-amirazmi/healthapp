@@ -11,7 +11,7 @@ export const TopNav = () => {
   const renderLinks = () => {
     return routes.map((route) => {
       if (route.showOnNav) return (
-        <NavItem>
+        <NavItem key={route.path}>
           <Link to={route.path} className="text-uppercase text-decoration-none nav-link">{route.name}</Link>
         </NavItem>
       )

@@ -1,0 +1,183 @@
+[{
+    "id": "1",
+    "name": "Klinik Mewah",
+    "location": {
+      "lat": "3.128451464737081",
+      "lng": "101.76554213825247",
+      "address": "Pandan Mewah Apartment Block A2, Taman Pandan Mewah",
+      "city": "Ampang",
+      "postcode": "68000",
+      "state": "Selangor"
+    },
+    "symptomsHandled": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "servicesOffered": [
+      "1",
+      "2",
+      "3"
+    ],
+    "reviews": [],
+    "image": "http://localhost:3000/dummy/assets/klinikmewah.png"
+  },
+  {
+    "id": "2",
+    "name": "NextMed Clinic",
+    "location": {
+      "lat": "3.0282577444944754",
+      "lng": "101.75288085549295",
+      "address": "8-G, Jalan Simfoni 1, Menara Simfoni, Cheras Selatan Balakong",
+      "city": "Seri Kembangan",
+      "postcode": "43300",
+      "state": "Selangor"
+    },
+    "symptomsHandled": [
+      "3",
+      "7",
+      "9",
+      "10",
+      "11"
+    ],
+    "servicesOffered": [
+      "1",
+      "2",
+      "3"
+    ],
+    "labels": [
+      "1",
+      "2",
+      "3"
+    ],
+    "reviews": [],
+    "image": "http://localhost:3000/dummy/assets/nextmed.jpg"
+  },
+  {
+    "id": "3",
+    "name": "The Red Clinic",
+    "location": {
+      "lat": "3.1251598156771676",
+      "lng": "101.63564503617792",
+      "address": "No. 23-P1, Block B, Jaya One, 72A, Jln Profesor Diraja Ungku Aziz",
+      "city": "Petaling Jaya",
+      "postcode": "46200",
+      "state": "Selangor"
+    },
+    "symptomsHandled": [
+      "7",
+      "8",
+      "9"
+    ],
+    "servicesOffered": [
+      "1",
+      "2",
+      "3"
+    ],
+    "reviews": [],
+    "image": "http://localhost:3000/dummy/assets/theredclinic.jpeg"
+  },
+  {
+    "id": "4",
+    "name": "Premier Clinic",
+    "location": {
+      "lat": "3.050656918839996",
+      "lng": "101.62195918099258",
+      "address": "G-15, IOI Boulevard, Jalan Kenari 4, Bandar Puchong Jaya",
+      "city": "Puchong",
+      "postcode": "47100",
+      "state": "Selangor"
+    },
+    "symptomsHandled": [
+      "2",
+      "5",
+      "4",
+      "7",
+      "14"
+    ],
+    "servicesOffered": [
+      "1",
+      "2",
+      "3"
+    ],
+    "reviews": [],
+    "image": "http://localhost:3000/dummy/assets/premierclinic.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Family Clinic Seventeen",
+    "location": {
+      "lat": "3.132134149309103",
+      "lng": "101.63457562199923",
+      "address": "923A, Jalan 17/38, Seksyen 17",
+      "city": "Petaling Jaya",
+      "postcode": "46400",
+      "state": "Selangor"
+    },
+    "symptomsHandled": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "servicesOffered": [
+      "1",
+      "2",
+      "3"
+    ],
+    "reviews": [],
+    "image": "http://localhost:3000/dummy/assets/familyclinic.jpeg"
+  },
+  {
+    "id": "6",
+    "name": "Clinic RX",
+    "location": {
+      "lat": "3.0237286185260173",
+      "lng": "101.62573573090617",
+      "address": "G-17, Jln Puteri 7/13A, Bandar Puteri",
+      "city": "Puchong",
+      "postcode": "47100",
+      "state": "Selangor"
+    },
+    "symptomsHandled": [
+      "3",
+      "6",
+      "9",
+      "12",
+      "10"
+    ],
+    "servicesOffered": [
+      "1",
+      "2",
+      "3"
+    ],
+    "reviews": [],
+    "image": "http://localhost:3000/dummy/assets/clinicrx.jpg"
+  },
+  {
+    "id": "7",
+    "name": "SunMed Clinic",
+    "location": {
+      "lat": "3.0821269266832276",
+      "lng": "101.60401445942905",
+      "address": "3, Jalan PJS 11/15, Bandar Sunway",
+      "city": "Subang Jaya",
+      "postcode": "47500",
+      "state": "Selangor"
+    },
+    "symptomsHandled": [
+      "6",
+      "5",
+      "3",
+      "13"
+    ],
+    "servicesOffered": [
+      "1",
+      "2",
+      "3"
+    ],
+    "reviews": [],
+    "image": "http://localhost:3000/dummy/assets/sunmed.jpg"
+  }
+]

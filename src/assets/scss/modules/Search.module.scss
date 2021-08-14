@@ -6,18 +6,29 @@
 
   .button {
     width: 100%;
-    background: $primary;
-    border: 1px solid $primary;
   }
 
   .selected {
-    background: $primary-opacity-1;
-    border: none;
+    background: #fff;
     color: $primary;
+    border: 1px solid $primary;
     font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.2s ease-in-out;
+
+    i {
+      display: none;
+    }
+
+    &:hover {
+      background: rgba(255, 0, 0, 0.2);
+      color: red;
+      border: 1px red solid;
+    }
 
     &:hover i {
       color: red;
+      display: inline;
     }
   }
 }

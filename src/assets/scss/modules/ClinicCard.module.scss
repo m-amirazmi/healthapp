@@ -13,7 +13,10 @@
 
   .range {
     color: $primary;
-    border: 1px $primary solid;
+    font-weight: bold;
+    // border: 1px $primary solid;
+    background: $primary-opacity-1;
+    font-size: 0.9rem;
   }
 
   .badge {
@@ -28,6 +31,17 @@
 
   &:hover {
     box-shadow: $box-shadow;
+  }
+
+  &.active {
+    border: 1px solid $primary;
+    // border: none;
+    box-shadow: $box-shadow;
+    // background: $primary-opacity-1;
+  }
+
+  .location {
+    font-size: 0.85rem;
   }
 
 }

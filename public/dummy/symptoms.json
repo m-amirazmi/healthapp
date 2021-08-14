@@ -1,0 +1,57 @@
+[{
+    "id": "1",
+    "name": "Fever"
+  },
+  {
+    "id": "2",
+    "name": "Cough"
+  },
+  {
+    "id": "3",
+    "name": "Headache"
+  },
+  {
+    "id": "4",
+    "name": "Nausea"
+  },
+  {
+    "id": "5",
+    "name": "Stomache"
+  },
+  {
+    "id": "6",
+    "name": "Chest Pain"
+  },
+  {
+    "id": "7",
+    "name": "Fatigue"
+  },
+  {
+    "id": "8",
+    "name": "Sore Throat"
+  },
+  {
+    "id": "9",
+    "name": "Muscle Pain"
+  },
+  {
+    "id": "10",
+    "name": "Cold"
+  },
+  {
+    "id": "11",
+    "name": "Diarrhea"
+  },
+  {
+    "id": "12",
+    "name": "Vomitting"
+  },
+  {
+    "id": "13",
+    "name": "Joint Pain"
+  },
+  {
+    "id": "14",
+    "name": "Breath Shortness"
+  }
+]
