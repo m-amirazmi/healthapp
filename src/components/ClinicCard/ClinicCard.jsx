@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, Col, Row, Button } from "reactstrap";
 import styles from "./ClinicCard.module.scss";
 
@@ -73,9 +74,11 @@ export const ClinicCard = (props) => {
         </Row>
         {props.active && (
           <div className="mt-3">
-            <Button size="sm" color="primary" className="w-100">
-              Book Now
-            </Button>
+            <Link to={`/clinics/${props.clinic.id}`}>
+              <Button size="sm" color="primary" className="w-100">
+                Book Now
+              </Button>
+            </Link>
           </div>
         )}
       </Card>
