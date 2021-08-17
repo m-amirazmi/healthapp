@@ -1,7 +1,6 @@
-@import '../variable.scss';
-
+@import "../../assets/scss/variable";
 .container {
-  // background: $primary-opacity-1 !important;
+  background: $primary-opacity-1 !important;
   // border: none;
 
   .button {

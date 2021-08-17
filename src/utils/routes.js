@@ -1,4 +1,4 @@
-import { Clinics } from "../pages/Clinics";
+import { Clinics } from "../pages/Clinics/Clinics";
 
 export const routes = [
   {
