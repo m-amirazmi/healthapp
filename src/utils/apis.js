@@ -1,7 +1,7 @@
 import CONFIG from './config'
 
 const localUrl = '../dummy'
-const devUrl = 'localhost:3000/dummy'
+const devUrl = 'https://dev.amirazmi.me/healthapp/dummy'
 const prodUrl = ''
 
 let API_URL
